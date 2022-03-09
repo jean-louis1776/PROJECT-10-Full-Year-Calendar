@@ -1,0 +1,88 @@
+@import 'reset';
+
+.calendar {
+    padding: 20px 40px;
+
+    .calendar-header {
+        border: none;
+
+        .year-title {
+            font-size: 4em;
+            font-family: 'Dancing Script',
+                cursive;
+            color: #f75c90;
+        }
+
+        .year-neighbor {
+            font-size: 2.25em;
+        }
+
+        .year-neighbor2 {
+            font-size: 1em;
+        }
+
+        table {
+            th:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .months-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+        .month-container {
+            background-color: #fff;
+            padding: 20px;
+            min-width: 280px;
+            box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+
+            table.month {
+                tr {
+                    td {
+                        font-size: 0.9em;
+                        font-weight: 500;
+                        color: #777;
+                    }
+                }
+
+                th.month-title {
+                    color: #5a8990;
+                    font-size: 1.9em;
+                    font-weight: 200;
+                    font-family: 'Marck Script',
+                        cursive;
+                }
+
+                th.day-header {
+                    color: #777;
+                    font-size: 0.9em;
+                    font-weight: 700;
+                }
+
+                td.day {
+                    .day-content {
+                        padding: 6px 8px;
+                        transition: 0.2s;
+
+                        &:hover {
+                            background-color: #f75c908c;
+                            color: #fff;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+
+                td:nth-child(6),
+                td:nth-child(7),
+                thead tr:nth-child(2) th:nth-child(6),
+                thead tr:nth-child(2) th:nth-child(7) {
+                    color: #f75c90;
+                }
+            }
+        }
+    }
+}
